@@ -10,6 +10,7 @@ public class CarObjects {
         Mercedes mercedes = new Mercedes();
         Tesla tesla = new Tesla();
         Jeep jeep = new Jeep();
+        BMW bmw = new BMW();
 
         honda.start();
         System.out.println("=====================");
@@ -18,6 +19,9 @@ public class CarObjects {
         tesla.start();
         System.out.println("====================");
         jeep.start();
+        System.out.println("=========================");
+
+        bmw.start();
     }
 
 }
