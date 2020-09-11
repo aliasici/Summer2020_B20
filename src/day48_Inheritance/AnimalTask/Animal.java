@@ -1,4 +1,7 @@
 package day48_Inheritance.AnimalTask;
+/*
+Work hard
+ */
 
 public class Animal {
     public String name;
