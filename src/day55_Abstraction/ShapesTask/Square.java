@@ -1,31 +1,29 @@
 package day55_Abstraction.ShapesTask;
 
-public final class Rectangle extends Shape {
+public final class Square extends Shape {
 
-    public double width;
-    public double length;
+    public double side;
 
-    public Rectangle(double width, double length) {
-        if(width<=0 || length<=0){
-            throw new RuntimeException("width and length of rectangle cannot be negative or 0");
+    public Square(double side){
+        if(side <= 0){
+            throw new RuntimeException("side of square can not be negative or zero");
         }
-        this.width = width;
-        this.length = length;
+        this.side = side;
         area = calculateArea();
         perimeter = calculatePerimeter();
         volume = calculateVolume();
-        name = "Rectangle";
+        name = "Square";
         hasVolume = false;
     }
 
     @Override
     public double calculateArea() {
-        return width*length;
+        return side * side;
     }
 
     @Override
     public double calculatePerimeter() {
-        return (width+length)*2;
+        return 4 * side;
     }
 
     @Override
@@ -33,18 +31,13 @@ public final class Rectangle extends Shape {
         return 0;
     }
 
-
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "width=" + width +
-                ", length=" + length +
+        return "Square{" +
+                "side=" + side +
                 ", area=" + area +
                 ", perimeter=" + perimeter +
                 ", volume=" + volume +
                 '}';
     }
-
-
-
 }
